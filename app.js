@@ -9,5 +9,6 @@ app.use(helmet());
 app.use('/', createProxyMiddleware({ 
   target: 'https://api.themoviedb.org',
   changeOrigin: true,
+  logger: console
 }));
 app.listen(PORT);
